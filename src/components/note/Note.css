@@ -1,0 +1,48 @@
+textarea {
+  outline: none;
+  resize: none;
+  border-radius: 2%;
+}
+
+.day-note {
+  padding: 0rem 3rem;
+  border: 0.25rem solid #ccc;
+}
+
+#note {
+  width: 100%;
+  height: 25vh;
+  overflow-y: scroll;
+  border: none;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  margin: 1.5rem 0rem;
+}
+
+.button-section {
+  display: flex;
+  justify-content: end;
+  border-top: 0.2rem double #ccc;
+  padding: 1.2rem 0;
+}
+
+.button-section button {
+  color: #fff;
+  border-radius: 10%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: hsla(216, 88%, 62%, 1);
+}
+
+.button-section button:hover {
+  background-color: rgb(37, 103, 202);
+}
+
+.button-section button.delete {
+  background-color: hsla(0, 88%, 40%, 1);
+}
+
+.button-section button.delete:hover {
+  background-color: hsla(0, 88%, 50%, 1);
+}

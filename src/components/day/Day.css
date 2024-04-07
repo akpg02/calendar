@@ -1,0 +1,60 @@
+.calendar {
+  width: 45%;
+}
+.menu-bar {
+  margin-bottom: 2rem;
+}
+
+.menu-bar button {
+  color: #fff;
+  border-radius: 10%;
+  border: 0.1rem solid #ccc;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.menu-bar button:hover {
+  background-color: hsla(216, 88%, 62%, 1);
+}
+
+.notes-section {
+  border: 0.2rem solid hsla(216, 88%, 62%, 1);
+}
+
+@media screen and (max-width: 720px) {
+  .weekdays li,
+  .days li {
+    width: 13.1%;
+  }
+  .calendar {
+    width: 80%;
+  }
+  .month {
+    padding: 2rem 0rem !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li,
+  .days li {
+    width: 12.5%;
+  }
+  .days li .active {
+    padding: 0.125rem;
+  }
+  .month ul.month-menu li,
+  .month ul.month-menu li button,
+  .month ul.month-menu li button i {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li,
+  .days li {
+    width: 12.2%;
+  }
+  .calendar {
+    width: 95%;
+  }
+}

@@ -1,0 +1,39 @@
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border-radius: 100%;
+}
+
+.days li div.circle.active {
+  border-radius: 100%;
+  border: 0.2rem solid hsla(101, 88%, 39%, 1);
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}

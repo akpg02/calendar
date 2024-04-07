@@ -1,0 +1,45 @@
+.month-menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.month-menu li {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.188rem;
+}
+
+.month-menu li button {
+  color: #fff;
+}
+
+.month .prev {
+  font-size: 1.8rem;
+}
+
+.month .next {
+  font-size: 1.8rem;
+}
+
+.month-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.month-header button {
+  color: #fff;
+  border-radius: 10%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.month-header button:hover {
+  background-color: hsla(216, 88%, 62%, 1);
+}
