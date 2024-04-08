@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import { months } from "../../utils/data";
-import "./Month.css";
+import Months from "../months/Months";
 import Header from "../header/Header";
+import "./Month.css";
 
 function Month({ date, setDate }) {
+  const [showMonths, setShowMonths] = useState(false);
+
   const nextMonth = () => {
     setDate(new Date(date.setMonth(date.getMonth() + 1)));
   };
@@ -28,34 +31,48 @@ function Month({ date, setDate }) {
 
   return (
     <Header>
-      <div className="month-header">
-        <button onClick={getToday}>Today</button>
-      </div>
-      <ul className="month-menu">
-        <li>
-          <button className="prev" onClick={previousYear}>
-            <i className="fa fa-angle-double-left"></i>
-          </button>
-        </li>
-        <li>
-          <button className="prev" onClick={previousMonth}>
-            <i className="fas fa-angle-left prev"></i>
-          </button>
-        </li>
-        <li>
-          {months[date.getMonth()]} {date.getFullYear()}
-        </li>
-        <li>
-          <button className="next" onClick={nextMonth}>
-            <i className="fas fa-angle-right next"></i>
-          </button>
-        </li>
-        <li>
-          <button className="next" onClick={nextYear}>
-            <i className="fa fa-angle-double-right"></i>
-          </button>
-        </li>
-      </ul>
+      {showMonths ? (
+        <>
+          <Months setShowMonths={setShowMonths} />
+        </>
+      ) : (
+        <>
+          <div className="month-header">
+            <button onClick={getToday}>Today</button>
+          </div>
+          <ul className="month-menu">
+            <li>
+              <button className="prev" onClick={previousYear}>
+                <i className="fa fa-angle-double-left"></i>
+              </button>
+            </li>
+            <li>
+              <button className="prev" onClick={previousMonth}>
+                <i className="fas fa-angle-left prev"></i>
+              </button>
+            </li>
+            <li>
+              <span
+                className="month-label"
+                onClick={() => setShowMonths(!false)}
+              >
+                {months[date.getMonth()]}
+              </span>{" "}
+              {date.getFullYear()}
+            </li>
+            <li>
+              <button className="next" onClick={nextMonth}>
+                <i className="fas fa-angle-right next"></i>
+              </button>
+            </li>
+            <li>
+              <button className="next" onClick={nextYear}>
+                <i className="fa fa-angle-double-right"></i>
+              </button>
+            </li>
+          </ul>
+        </>
+      )}
     </Header>
   );
 }

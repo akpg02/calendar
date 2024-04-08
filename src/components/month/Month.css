@@ -26,6 +26,10 @@
   font-size: 1.8rem;
 }
 
+.month-label {
+  cursor: pointer;
+}
+
 .month-header {
   display: flex;
   justify-content: flex-start;

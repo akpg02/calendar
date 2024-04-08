@@ -14,10 +14,13 @@
 @media screen and (max-width: 420px) {
   .weekdays li,
   .days li {
-    width: 12.5%;
+    width: 13.5% !important;
   }
   .days li .active {
     padding: 0.125rem;
+  }
+  .calendar {
+    width: 95% !important;
   }
   .month ul.month-menu li,
   .month ul.month-menu li button,
@@ -32,6 +35,6 @@
     width: 12.2%;
   }
   .calendar {
-    width: 95%;
+    width: 98%;
   }
 }
