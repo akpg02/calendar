@@ -1,9 +1,13 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import { months } from "../../utils/data";
+import { months, monthNum } from "../../utils/data";
 import "./Months.css";
 
-function Months({ setShowMonths }) {
+function Months({ date, setDate, setShowMonths }) {
+  const handleMonth = (m) => {
+    setDate(new Date(date.setMonth(monthNum(m))));
+    setShowMonths(false);
+  };
   return (
     <div className="months-header">
       <div className="close">
@@ -16,7 +20,11 @@ function Months({ setShowMonths }) {
       </div>
       <div className="months-container">
         {months.map((m) => (
-          <button key={uuidv4()} className="month">
+          <button
+            onClick={() => handleMonth(m)}
+            key={uuidv4()}
+            className="month"
+          >
             {m}
           </button>
         ))}

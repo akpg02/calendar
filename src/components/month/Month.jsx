@@ -33,7 +33,7 @@ function Month({ date, setDate }) {
     <Header>
       {showMonths ? (
         <>
-          <Months setShowMonths={setShowMonths} />
+          <Months date={date} setDate={setDate} setShowMonths={setShowMonths} />
         </>
       ) : (
         <>
