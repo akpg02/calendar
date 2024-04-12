@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { v4 as uuidv4 } from "uuid";
 import { months, monthNum } from "../../utils/data";
 import "./Months.css";
@@ -11,12 +12,12 @@ function Months({ date, setDate, setShowMonths }) {
   return (
     <div className="months-header">
       <div className="close">
-        <span
+        <button
           onClick={() => setShowMonths(false)}
           className="material-symbols-outlined"
         >
           close
-        </span>
+        </button>
       </div>
       <div className="months-container">
         {months.map((m) => (
@@ -32,5 +33,11 @@ function Months({ date, setDate, setShowMonths }) {
     </div>
   );
 }
+
+Months.propTypes = {
+  date: PropTypes.object,
+  setDate: PropTypes.func,
+  setShowMonths: PropTypes.func,
+};
 
 export default Months;
